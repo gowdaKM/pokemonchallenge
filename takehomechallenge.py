@@ -53,7 +53,7 @@ highest_avg_hp_type2 = cleansed_data.groupBy("Type 2").avg("HP").orderBy(col("av
 print("Pokemon type with the highest average HP:", highest_avg_hp_type2)
 
 highest_avg_Hp_type2=spark.createDataFrame([highest_avg_hp_type2])
-highest_avg_Hp_type2.coalesce(1).write.csv("/root/pokemon/output/highest_avg_hp",header=True,mode="overwrite")
+highest_avg_Hp_type2.coalesce(1).write.csv("/root/pokemon/output/highest_avg_Hp_type2",header=True,mode="overwrite")
 
 
 
@@ -76,5 +76,5 @@ print("Most common special Attack:", most_common_special_attack)
 most_common_special_attack=spark.createDataFrame([most_common_special_attack])
 most_common_special_attack.coalesce(1).write.csv("/root/pokemon/output/most_common_special_attack",header=True,mode="overwrite")
 
-## spark.stop()
+spark.stop()
 

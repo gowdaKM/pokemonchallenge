@@ -5,7 +5,7 @@ which answers the following questions
 
 ![img.png](img.png)
 
-## Run locally (Bulk load)
+## Run locally
 
 Steps to run locally 
 1. Replace the username and key in kaggle.json

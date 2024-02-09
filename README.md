@@ -8,7 +8,9 @@ which answers the following questions
 ## Run locally (Bulk load)
 
 Steps to run locally 
-1. Replace the username and key in kaggle.json 
+1. Replace the username and key in kaggle.json
+2. place the spark-3.2.0-bin-hadoop3.2.tgz file in the same directory as your Dockerfile <br>
+   https://archive.apache.org/dist/spark/spark-3.2.0/
 2. create a spark image by running the below cmd in cmdline <br>
 ```docker build -t spark-image .```
 3. Run spark jobs <br>
@@ -25,8 +27,3 @@ the output file is found in output/highest_avg_hp_combined/part**.csv
    ![img_4.png](img_4.png) <br>
 
 the output file is found in output/most_common_special_attack.csv/part**.csv
-
-
-```
-Note: Do remove all the created resources from aws and mongodb during clean up 
-```
